@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insta:erdinc8750</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #222 0%, #000 100%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 90deg, #00f, #0ff, #00f);
+      animation: rotate 10s linear infinite;
+      z-index: -1;
+      opacity: 0.05;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #ffffff, #888);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideUp 1.5s ease-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ccc;
+      animation: slideUp 2s ease-out;
+    }
+
+    a.glow {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: fadeIn 3s ease-in-out;
+      text-decoration: none;
+    }
+
+    a.glow:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    .projects {
+      padding: 4rem 2rem;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #0ff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      transition: all 0.3s ease;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      border-color: #0ff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .download {
+      padding: 4rem 2rem;
+      background-color: #0a0a0a;
+      text-align: center;
+    }
+
+    .download h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0ff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .download p {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 2rem;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .download-btn {
+      position: relative;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      color: white;
+      border: 2px solid #0ff;
+      border-radius: 30px;
+      text-decoration: none;
+      overflow: hidden;
+      transition: color 0.3s ease;
+      z-index: 1;
+    }
+
+    .download-btn .fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: #0ff;
+      z-index: -1;
+      transition: width 0.4s ease;
+    }
+
+    .download-btn:hover .fill {
+      width: 100%;
+    }
+
+    .download-btn:hover {
+      color: black;
+    }
+
+    footer {
+      background: #000;
+      color: #666;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Insta:erdinc8750</h1>
+    <p>Takip et, geç kalma.</p>
+    <a href="https://www.instagram.com/erdinc8750" target="_blank" class="glow">Profili Aç</a>
+  </section>
+
+  <section class="projects">
+    <h2>Projeler</h2>
+
+    <div class="project-card">
+      <h3>🎵 MP3 İndirme</h3>
+      <p>Basit ve hızlı arayüzle müzikleri indir, dinle, arşivle. Tüm cihazlarla uyumlu.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>🧊 Saydam GUI</h3>
+      <p>Cam efekti, minimal tasarım ve animasyonlu geçişlerle FLOP-style arayüz deneyimi.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>🖼️ Foto Editor</h3>
+      <p>Filtreler, kırpma, renk ayarları ve daha fazlasıyla sade ama güçlü bir fotoğraf düzenleyici.</p>
+    </div>
+  </section>
+
+  <section class="download">
+    <h2>İndirmek İçin</h2>
+    <p>Projeleri denemek, test etmek ve FLOP-style keyfi yaşamak için aşağıdan indirebilirsin.</p>
+    <a href="https://www.instagram.com/erdinc8750" target="_blank" class="download-btn">
+      İndirme Linki (Insta:erdinc8750)
+      <span class="fill"></span>
+    </a>
+  </section>
+
+  <footer>
+    © 2025 Tüm içerikler İnsta:Erdinc8750 kişisine aittir | Dosyaların editlenmesi baska yerlerde paylaşılması durumunda gerekli işlemler yapılacaktır Dosyalar tamamen Güvenlidir
+  </footer>
+</body>
+</html>
